@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8edf0">
+<title>For My Birthday Girl Jane ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --cream:#fffaf5;--paper:#fffdf9;--linen:#f6eee7;--blush:#f4dfe3;
+  --rose:#c78391;--rose-dark:#a95f72;--sage:#a9b59b;--green:#65765b;
+  --ink:#5e514d;--muted:#94817b;--line:#eadbd5;--shadow:0 18px 55px #765b5520;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.24;background-image:radial-gradient(#c9aeb0 .7px,transparent .7px);background-size:17px 17px}
+button,input{font:inherit}button{cursor:pointer}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500}
+.script{font-family:'Caveat',cursive}
+section{padding:92px 7%;position:relative}
+.section-heading{text-align:center;max-width:720px;margin:0 auto 42px}
+.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose-dark);margin-bottom:13px;font-weight:700}
+.section-heading h2{font-size:clamp(32px,5vw,49px);color:var(--green);line-height:1.15}
+.section-heading p{font-size:13px;line-height:1.9;color:var(--muted);margin-top:12px}
+.script-line{font:27px 'Caveat',cursive;color:var(--rose-dark)}
+.btn{border:0;border-radius:99px;padding:14px 25px;background:var(--green);color:white;font-size:12px;letter-spacing:.3px;box-shadow:0 8px 22px #65765b30;transition:.25s}
+.btn:hover{transform:translateY(-3px);background:#526449;box-shadow:0 12px 25px #65765b40}
+.btn.secondary{background:#f1dfe2;color:#925d69;box-shadow:none}
+.btn.secondary:hover{background:#e9cbd1}
+
+nav{position:sticky;top:0;z-index:90;display:flex;align-items:center;justify-content:space-between;padding:15px 6%;background:#fffaf5eF;backdrop-filter:blur(15px);border-bottom:1px solid #eadbd599}
+.logo{font:22px 'Playfair Display',serif;color:var(--green)}
+.nav-links{display:flex;gap:23px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:11px;transition:.2s}
+.nav-links a:hover{color:var(--rose-dark)}
+.menu-btn{display:none;border:0;background:none;color:var(--green);font-size:25px}
+
+.hero{min-height:87vh;display:grid;place-items:center;text-align:center;overflow:hidden;padding:95px 20px;background:radial-gradient(ellipse at 50% 35%,#fff 0,#fffaf5 47%,#f6e9e7 100%)}
+.hero-content{max-width:760px;position:relative;z-index:2}
+.hero-bouquet{font-size:75px;filter:drop-shadow(0 12px 10px #9a697322);animation:float 4s ease-in-out infinite;margin-bottom:16px}
+.hero h1{font-size:clamp(48px,8vw,88px);line-height:1.08;color:var(--green)}
+.hero h1 span{font-style:italic;color:var(--rose)}
+.hero-subtitle{font:30px 'Caveat',cursive;color:#a77d79;margin-top:16px}
+.hero-description{max-width:490px;margin:18px auto 25px;font-size:13px;line-height:2;color:var(--muted)}
+.decor{position:absolute;font-size:30px;animation:float 5s ease-in-out infinite;opacity:.8}
+.d1{top:17%;left:12%}.d2{top:23%;right:13%;animation-delay:1s}.d3{bottom:15%;left:17%;animation-delay:2s}.d4{bottom:18%;right:14%;animation-delay:.5s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-13px) rotate(3deg)}}
+
+.envelope-overlay{position:fixed;inset:0;z-index:1000;background:linear-gradient(140deg,#f8e9e7,#f4eee2);display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .8s,visibility .8s}
+.envelope-overlay.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.envelope-note{font:29px 'Caveat',cursive;color:var(--green);margin-bottom:24px}
+.envelope{width:285px;height:185px;position:relative;background:#d9c7b5;cursor:pointer;box-shadow:0 20px 45px #70594b30;display:grid;place-items:center;isolation:isolate}
+.envelope:before{content:"";position:absolute;inset:0;background:#cbb69f;clip-path:polygon(0 0,50% 56%,100% 0);z-index:2;transform-origin:top;transition:transform .6s}
+.envelope.open:before{transform:rotateX(180deg)}
+.envelope:after{content:"♡";font-size:44px;color:#b46f7d;z-index:3}
+.envelope-label{position:absolute;bottom:20px;z-index:4;font:22px 'Caveat',cursive;color:#765e4d}
+.envelope-help{font-size:11px;color:#887764;margin-top:27px}
+
+.letter-section{background:#f3e9e2}
+.letter{max-width:790px;margin:auto;padding:clamp(30px,6vw,66px);background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow);position:relative;transform:rotate(-.25deg)}
+.letter:after{content:"♡";position:absolute;right:28px;top:18px;font-size:28px;color:#d69ca6}
+.letter h3{font:36px 'Caveat',cursive;color:var(--rose-dark);margin-bottom:22px}
+.letter p{white-space:pre-line;line-height:2.05;font-size:13px;margin-bottom:15px}
+.signature{font:30px 'Caveat',cursive;color:var(--rose-dark);text-align:right;margin-top:26px}
+.edit-hint{text-align:center;font-size:10px;color:#a6958c;margin-top:17px}
+
+.gallery{background:#fffaf5}
+.gallery-grid{max-width:1080px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.polaroid{background:white;padding:11px 11px 25px;box-shadow:0 9px 25px #66564018;transform:rotate(var(--rotation,0deg));transition:.3s}
+.polaroid:hover{transform:rotate(0) translateY(-8px)}
+.polaroid img{width:100%;height:245px;object-fit:cover;display:block;background:#f0e4df;cursor:zoom-in}
+.polaroid p{text-align:center;font:22px 'Caveat',cursive;color:#8a7462;margin-top:11px}
+.upload-box{max-width:620px;margin:35px auto 0;padding:25px;border:1px dashed #c5b9a8;text-align:center;border-radius:18px;background:#ffffff80}
+.upload-box p{font:25px 'Caveat',cursive;margin-bottom:12px;color:var(--rose-dark)}
+.upload-box label{display:inline-block;background:var(--green);color:white;border-radius:99px;padding:12px 22px;font-size:11px;cursor:pointer}
+.upload-box input{display:none}
+
+.flowers-section{background:linear-gradient(145deg,#f4eee5,#f5e4e5);text-align:center}
+.flower-showcase{max-width:1000px;margin:auto;padding:clamp(25px,5vw,52px);background:#fffaf1;border:1px solid #eadfd1;border-radius:30px;box-shadow:var(--shadow)}
+.flower-decoration{font-size:28px;color:var(--green)}
+.main-bouquet{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:5px;font-size:clamp(48px,9vw,94px);padding:30px 0;filter:drop-shadow(0 9px 8px #74654b18);animation:float 4s infinite}
+.flower-script{font:36px 'Caveat',cursive;color:#b17e87}
+.flower-description{max-width:570px;margin:17px auto 0;line-height:2;font-size:13px;color:var(--muted)}
+.flower-collection{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:35px}
+.flower-item{background:#f5eee6;padding:22px 12px;border-radius:18px;border:1px solid #eee3d8}
+.flower-item div{font-size:47px}
+.flower-item h3{font-size:17px;color:var(--green);margin:10px 0}
+.flower-item p{font-size:11px;line-height:1.8;color:var(--muted)}
+.flower-final{font:25px/1.5 'Caveat',cursive;color:#a77c7d;margin-top:35px}
+
+.memories{background:#fffdf8}
+.letters-grid{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.letter-box{border:1px solid #eadbd5;background:linear-gradient(145deg,#fffdf9,#f8eceb);border-radius:17px;min-height:145px;padding:18px 10px;color:#7b725d;transition:.25s;box-shadow:0 5px 15px #765b550b}
+.letter-box:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:0 12px 25px #765b551c;border-color:#d9aab3}
+.letter-box .number{display:block;font:27px 'Caveat',cursive;color:var(--rose-dark)}
+.letter-box .tiny-heart{font-size:21px;display:block;margin:5px}
+.letter-box strong{font:16px 'Playfair Display',serif;color:var(--green);display:block}
+.letter-box small{font-size:9px;color:var(--muted);display:block;margin-top:7px}
+
+.letter-modal{display:none;position:fixed;inset:0;z-index:1200;background:#302622a8;align-items:center;justify-content:center;padding:18px}
+.letter-modal.show{display:flex}
+.letter-modal-content{position:relative;max-width:570px;width:100%;max-height:85vh;overflow:auto;background:#fffaf1;border:1px solid #ead8ca;border-radius:23px;padding:42px 35px;text-align:center;box-shadow:0 25px 70px #241b1b55;animation:pop .3s ease}
+@keyframes pop{from{opacity:0;transform:translateY(15px) scale(.98)}to{opacity:1;transform:none}}
+.modal-close{position:absolute;right:17px;top:12px;border:0;background:none;font-size:29px;color:#9a7d77}
+.modal-flower{font-size:43px;margin-bottom:10px}
+.letter-modal-content h2{font-size:30px;color:var(--green);margin:8px 0 15px}
+.letter-modal-content #letterContent{font-size:13px;line-height:2;white-space:pre-line;color:var(--ink)}
+.modal-signature{font:26px 'Caveat',cursive;color:var(--rose-dark);margin:20px}
+
+.gift-section{background:#f3e7e1;text-align:center}
+.gift-grid{max-width:900px;margin:auto;display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
+.gift-card{border:1px solid #ead6d3;background:#fffaf6;border-radius:20px;padding:22px 10px;min-height:160px;color:var(--green);box-shadow:0 8px 22px #765b5510;transition:.25s}
+.gift-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.gift-emoji{font-size:43px;display:block;margin-bottom:10px}
+.gift-card span:nth-child(2){font:16px 'Playfair Display',serif;display:block}
+.gift-card small{display:block;font-size:10px;color:var(--muted);margin-top:7px}
+.gift-surprise{display:none;max-width:600px;margin:28px auto 0;padding:35px;background:#fffaf5;border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);animation:pop .3s}
+.gift-surprise.show{display:block}
+.gift-surprise h2{color:var(--green);margin:10px 0}.gift-surprise p{font-size:13px;line-height:2}
+.gift-footer{font:24px 'Caveat',cursive;color:var(--rose-dark);margin-top:27px}
+.music-section{background:#e9eee5;text-align:center}
+.music-player{max-width:480px;margin:auto;padding:30px;background:#fffaf4;border:1px solid #e1e5d9;border-radius:28px;box-shadow:var(--shadow)}
+.album-art{width:175px;height:175px;margin:0 auto 20px;border-radius:23px;background:linear-gradient(145deg,#f2d8df,#dce4d3);display:grid;place-items:center;font-size:72px;box-shadow:inset 0 0 0 8px #ffffff55}
+.music-player h3{font-size:24px;color:var(--green)}
+.music-player>p{font-size:11px;color:var(--muted);margin-top:7px}
+.youtube-container{margin:22px 0 15px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#f4ece7;display:grid;place-items:center;color:var(--muted);font-size:12px}
+.youtube-container iframe{width:100%;height:100%;border:0}
+.youtube-input{display:flex;gap:8px;flex-wrap:wrap}
+.youtube-input input{flex:1;min-width:180px;border:1px solid var(--line);border-radius:99px;padding:12px 15px;font-size:11px;outline:none;background:white}
+.youtube-input input:focus{border-color:var(--rose)}
+.youtube-input .btn{padding:12px 18px}
+.music-note{font-size:10px;color:var(--muted);margin-top:13px;line-height:1.7}
+.ending{background:radial-gradient(ellipse at center,#fff 0,#fffaf5 55%,#f4e5e4 100%);text-align:center;min-height:75vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.big-heart{font-size:62px;color:var(--rose);animation:float 3s infinite}
+.ending .bouquet{font-size:83px;margin:8px}
+.ending h2{font-size:clamp(37px,6vw,64px);color:var(--green);margin:17px 0;line-height:1.15}
+.ending p{max-width:540px;font-size:13px;line-height:2}
+.ending .signature{font-size:32px}
+footer{text-align:center;background:#eee7df;padding:26px;font-size:10px;color:#927e6c;line-height:1.8}
+.lightbox{display:none;position:fixed;inset:0;z-index:1300;background:#211d1bdc;align-items:center;justify-content:center;padding:25px}
+.lightbox.show{display:flex}
+.lightbox img{max-width:92%;max-height:85vh;object-fit:contain;border:9px solid white;border-radius:4px}
+.close-lightbox{position:absolute;right:24px;top:15px;color:white;background:none;border:0;font-size:36px}
+.petal{position:fixed;top:-35px;z-index:60;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(600deg);opacity:0}}
+.confetti{position:fixed;z-index:1400;pointer-events:none;animation:confettiFall 3s ease-out forwards}
+@keyframes confettiFall{to{transform:translateY(100vh) rotate(720deg);opacity:0}}
+.reveal{opacity:0;transform:translateY(22px);transition:.8s}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:760px){
+ nav{padding:14px 5%}.menu-btn{display:block}.nav-links{display:none;position:absolute;top:100%;left:0;width:100%;padding:20px;background:#fffaf5;flex-direction:column;gap:18px;border-bottom:1px solid var(--line)}
+ .nav-links.active{display:flex}section{padding:70px 6%}.gallery-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+ .polaroid{padding:8px 8px 19px}.polaroid img{height:175px}.polaroid p{font-size:18px}
+ .flower-collection{grid-template-columns:repeat(2,1fr)}.letters-grid{grid-template-columns:repeat(3,1fr);gap:10px}
+ .letter-box{min-height:130px;padding:14px 6px}.gift-grid{grid-template-columns:repeat(2,1fr)}.gift-card:last-child{grid-column:1/-1}
+ .decor{font-size:22px}.d1{left:5%}.d2{right:5%}
+}
+@media(max-width:420px){.hero h1{font-size:45px}.gallery-grid{gap:10px}.polaroid img{height:145px}.letters-grid{grid-template-columns:repeat(2,1fr)}.letter-modal-content{padding:38px 22px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div class="envelope-overlay" id="envelopeOverlay">
+  <div class="envelope-note">a little birthday surprise for you ♡</div>
+  <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open birthday envelope">
+    <div class="envelope-label">for my wife</div>
+  </div>
+  <p class="envelope-help">click the envelope to open your gift</p>
+</div>
+
+<nav>
+  <div class="logo">for my wifey ♡</div>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a><a href="#letter">Love letter</a><a href="#gallery">Our pictures</a>
+    <a href="#flowers">Flowers</a><a href="#memories">24 letters</a><a href="#gift">Surprises</a><a href="#music">Our song</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <span class="decor d1">🌷</span><span class="decor d2">🧸</span><span class="decor d3">♡</span><span class="decor d4">🌸</span>
+  <div class="hero-content">
+    <div class="hero-bouquet">💐</div>
+    <div class="eyebrow">a special day for someone special</div>
+    <h1>Happy Birthday,<br><span>My Amazing Kindest Wife</span> ♡</h1>
+    <div class="hero-subtitle">to my favorite person in the world</div>
+    <p class="hero-description">Today, the world celebrates the day you were born, and I celebrate how lucky I am to have you in my life. This little website is made with all my love, just for you.</p>
+    <button class="btn" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">Read my letter ♡</button>
+  </div>
+</section>
+
+<section class="letter-section" id="letter">
+  <div class="section-heading reveal"><div class="eyebrow">words from my heart</div><h2>A Little Letter For You</h2><p>Something I want you to keep forever ♡</p></div>
+  <div class="letter reveal">
+    <h3>My dearest love,</h3>
+    <p>Happy birthday, my beautiful girl.
+
+**To the woman I hope to call my wife for the rest of my life,**
+
+I wish I could be beside you today. I wish I could hold your hands, look into your eyes, give you the most beautiful bouquet of flowers, and remind you in person how much you mean to me. If distance were something I could simply cross, I wouldn't hesitate to spend this entire day making you feel like the most loved woman in the world.
+
+As another year is added to your life, I hope you realize how precious your existence is. I hope life becomes gentler with you. I hope you receive the happiness you've been quietly wishing for, the peace you've been searching for, and the opportunities that bring you closer to the life you've always dreamed of. You deserve a life where you never have to question your worth, where your heart feels safe, and where you are loved without having to ask for it.
+
+Sometimes, I find myself imagining the years ahead of us. Not just the birthdays, anniversaries, and beautiful occasions, but the ordinary days, too. The mornings when we wake up beside each other, the evenings when we talk about how our day went, the quiet moments when we do absolutely nothing, and the difficult days when life doesn't go according to plan. I want those moments with you just as much as I want the beautiful ones.
+
+I don't just want to be someone who celebrates your birthdays. I want to be there when you accomplish something you've worked so hard for. I want to hold you when the world feels too heavy, listen when you have a thousand things on your mind, and remind you that you don't have to carry everything alone. I want to witness every version of you, through every change, every achievement, every uncertainty, and every season of life.
+
+I know love isn't simply about promising forever. It's about choosing each other when things are difficult, learning how to understand one another, admitting when we're wrong, growing together, and making the conscious decision to stay. I cannot promise that every day will be perfect, but I can promise that the love I want to build with you is something I intend to nurture, protect, and never take for granted.
+
+And if life allows me to have the future I keep dreaming about, I hope one day I won't have to send you birthday wishes through a screen. I hope I'll be standing in front of you with flowers in my hands, celebrating another year of your life as the woman I get to come home to. I want to see you wearing a beautiful dress, holding my hand, and eventually becoming my wife. I want to make promises not only through letters but through the life we build together.
+
+I want to grow old with you. I want to know the little things that make you happy, remember the stories you tell me a hundred times, learn how to comfort you in ways words cannot, and still find new reasons to fall in love with you even after many years have passed.
+
+Thank you for existing in my life. Thank you for allowing me to know the person behind your smiles, your silence, your dreams, and your vulnerabilities. I may not always know the perfect thing to say, and I know there will still be so much for us to learn about each other, but please never mistake my imperfect words for an imperfect love.
+
+**Happy birthday, my love. My beautiful girl, my answered prayer, and the woman I hope to marry someday.**
+
+If I could ask life for one beautiful thing beyond all the dreams I have for myself, it would be the opportunity to share more of it with you. Not just for a few months or a few years, but for as long as we are blessed to have each other.
+
+May the years ahead bring you closer to everything your heart desires. And if I'm fortunate enough, I hope I'll be beside you through all of them, holding the same hands I wish I could hold today.
+
+**I don't just want to be part of your beautiful memories. I want to be part of your entire story, until we're old enough to look back and realize that we really did build the life we once dreamed about.**
+
+I love you, my future wife. Always.
+
+I love you endlessly. ♡</p>
+    <div class="signature">forever yours,<br>your wife ♡</div>
+  </div>
+  <p class="edit-hint">You can give me kisses first if you want more.</p>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="section-heading"><div class="eyebrow">two girls, one beautiful story</div><h2>Our Little World ♡</h2><p>My favorite girl, my favorite memories, my favorite love story.</p></div>
+  <div class="gallery-grid" id="galleryGrid">
+    <div class="polaroid" style="--rotation:-2deg"><img src="photos/couple1.jpg" alt="Two girls holding hands" loading="lazy"><p>us when were in love ♡</p></div>
+    <div class="polaroid" style="--rotation:2deg"><img src="photos/couple2.jpg" alt="Two girls hugging" loading="lazy"><p>my favorite embrace</p></div>
+    <div class="polaroid" style="--rotation:-1deg"><img src="photos/couple3.jpg" alt="Two girls on a date" loading="lazy"><p>just eyes on me🌷</p></div>
+    <div class="polaroid" style="--rotation:2deg"><img src="photos/couple4.jpg" alt="Two girls sharing a romantic moment" loading="lazy"><p>you feel like home</p></div>
+    <div class="polaroid" style="--rotation:-2deg"><img src="photos/couple5.jpg" alt="Two girls holding flowers" loading="lazy"><p>your my fav wife</p></div>
+    <div class="polaroid" style="--rotation:1deg"><img src="photos/couple6.jpg" alt="Two girls together" loading="lazy"><p>im your forever person ♡</p></div>
+  </div>
+  <div class="upload-box"><p>Add more of our memories ♡</p><label for="photoUpload">＋ Upload couple pictures</label><input type="file" id="photoUpload" accept="image/*" multiple></div>
+</section>
+
+<section class="flowers-section" id="flowers">
+  <div class="section-heading"><div class="eyebrow">a garden made just for you</div><h2>A Thousand Flowers For My Wife</h2><p>Every flower reminds me of a different reason to love you.</p></div>
+  <div class="flower-showcase">
+    <div class="flower-decoration">🌿　🌸　🌿</div>
+    <div class="main-bouquet"><span>🤍</span><span>🌺</span><span>🌸</span><span>💐</span><span>🌸</span><span>🌺</span><span>🤍</span></div>
+    <h3 class="flower-script">A flowers for my prettiest wife</h3>
+    <p class="flower-description">White lilies for your beautiful soul. Pink carnations for my admiration. Pink roses for my endless love. And baby's breath for all the little moments I wish to spend with you.</p>
+    <div class="flower-collection">
+      <div class="flower-item"><div>🤍</div><h3>White Lilies</h3><p>For your gentle and beautiful heart.</p></div>
+      <div class="flower-item"><div>🌸</div><h3>Pink Carnations</h3><p>For my admiration and affection.</p></div>
+      <div class="flower-item"><div>🌹</div><h3>Pink Roses</h3><p>For the love I will always choose.</p></div>
+      <div class="flower-item"><div>🌼</div><h3>Baby's Breath</h3><p>For our little moments together.</p></div>
+    </div>
+    <div class="flower-final">“If I could fill the whole world with flowers,<br>I would still save the prettiest bouquet for you.”<p>— your forever girl ♡</p></div>
+  </div>
+</section>
+
+<section class="memories" id="memories">
+  <div class="section-heading"><div class="eyebrow">24 little chapters of our love</div><h2>24 Letters For You ♡</h2><p>From the day we met to the day you turn 24. Every letter holds a little piece of my heart.</p></div>
+  <div class="letters-grid" id="lettersGrid"></div>
+  <div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+    <div class="letter-modal-content">
+      <button class="modal-close" onclick="closeLetter()" aria-label="Close letter">×</button>
+      <div class="modal-flower">🌷</div><p id="letterNumber" class="eyebrow"></p>
+      <h2 id="letterTitle"></h2><p id="letterContent"></p>
+      <div class="modal-signature">always yours, ♡</div>
+      <button class="btn secondary" onclick="closeLetter()">Back to our letters</button>
+    </div>
+  </div>
+</section>
+
+<section class="gift-section" id="gift">
+  <div class="section-heading"><div class="eyebrow">five little gifts for my birthday girl</div><h2>Something Special For You</h2><p>There are five little surprises waiting for you, my love. Tap each gift to open it.</p></div>
+  <div class="gift-grid">
+    <button class="gift-card" onclick="revealGift(0)"><span class="gift-emoji">🎀</span><span>Gift No. 1</span><small>A little sweetness</small></button>
+    <button class="gift-card" onclick="revealGift(1)"><span class="gift-emoji">🍓</span><span>Gift No. 2</span><small>Sweet treats for you</small></button>
+    <button class="gift-card" onclick="revealGift(2)"><span class="gift-emoji">🧸</span><span>Gift No. 3</span><small>A teddy bear hug</small></button>
+    <button class="gift-card" onclick="revealGift(3)"><span class="gift-emoji">💐</span><span>Gift No. 4</span><small>Flowers from me</small></button>
+    <button class="gift-card" onclick="revealGift(4)"><span class="gift-emoji">💝</span><span>Gift No. 5</span><small>My biggest surprise</small></button>
+  </div>
+  <div id="giftSurprise" class="gift-surprise" aria-live="polite"><div id="surpriseEmoji" style="font-size:60px">🎁</div><h2 id="surpriseTitle">A surprise for you!</h2><p id="surpriseText"></p><button class="btn secondary" onclick="closeSurprise()">Back to my gifts ♡</button></div>
+  <p class="gift-footer">five gifts, endless love, and one very special girl. ♡</p>
+</section>
+
+<section class="music-section" id="music">
+  <div class="section-heading"><div class="eyebrow">a melody dedicated to you</div><h2>Our Little Love Song</h2><p>A song that reminds me of you, my love.</p></div>
+  <div class="music-player">
+    <div class="album-art">🧸🌷</div><h3>A Song For My Wife</h3><p>Dedicated to my favorite girl ♡</p>
+    <div class="youtube-container" id="youtubeContainer">Your song will appear here ♡</div>
+    <div class="youtube-input"><input type="url" id="youtubeLink" placeholder="Paste a YouTube song URL" aria-label="YouTube song URL"><button class="btn" onclick="loadYoutube()">Play our song ♡</button></div>
+    <p class="music-note">Paste a YouTube video link or its share link. Some videos may not allow playback outside YouTube.</p>
+  </div>
+</section>
+
+<section class="ending">
+  <div class="big-heart">♡</div><div class="bouquet">💐</div><div class="eyebrow">to my forever birthday girl</div>
+  <h2>Happy Birthday,<br>My Beautiful Wife.</h2>
+  <p>No matter how many birthdays come and go, I will always be grateful that this world gave me you. I hope life treats you gently, your dreams come true, and your heart always finds reasons to smile.<br><br>Thank you for existing. Thank you for being you. I love you more than words could ever explain.</p>
+  <div class="signature">yours, today and always ♡</div><p style="margin-top:22px;color:#b18b87">🧸 ⋆｡°✩ 🌷 ♡ 🌸 ✩°｡⋆</p>
+</section>
+<footer>made with all my love ♡ exclusively for my birthday girl<br><br>© 2026 — forever us.</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="close-lightbox" aria-label="Close image">×</button><img id="lightboxImage" src="" alt="Our memory">
+</div>
+
+<script>
+    /* EDIT THESE 24 LETTERS TO ADD YOUR PERSONAL MEMORIES AND MILESTONES. */
+const letters = [
+
+    ["The Day We Met",
+    "I still love thinking about how our story began. I first saw you on Facebook, and I was genuinely amazed by the way your mind works. There was something about your thoughts and the way you expressed yourself that caught my attention. I became curious about you, and before I knew it, I was checking your profile just to see if you had posted something new. I never imagined that someone I first saw on social media would eventually become such an important person in my life. It's amazing how a simple moment can lead to something so meaningful. Sometimes I wonder how different things would have been if I had never come across your profile. But I'm glad I did because that little moment became the beginning of a story I never want to forget. Looking back, I'm truly grateful that our paths crossed, and I got the chance to know someone as wonderful as you."],
+
+    ["Our First Conversation",
+    "I still remember one of our first conversations, especially that playful moment when I asked you to be my dog. Haha! It took me about a week to finally make a move because, at first, I only wanted to become friends with you. I was probably overthinking how to approach you because I didn't know how our conversations would go. I never expected that a simple conversation would turn into something this meaningful. Little by little, we started talking more, sharing stories, and learning about each other. I began looking forward to your replies and finding excuses to start another conversation. What started as a simple attempt to get to know you slowly became something I genuinely treasured. I'm glad I found the courage to approach you because otherwise, I might have missed the chance to have you in my life."],
+
+    ["The First Time I Smiled Because of You",
+    "You have no idea how many times you've made me smile without even trying. I remember how big my smile would get whenever I managed to annoy you or get a reaction out of you. Even our simplest conversations could turn an ordinary day into a good one. Sometimes, I would catch myself smiling at my screen just because of something you said. I love how we can talk about almost anything and somehow make each other smile. You have this special way of making my mood better without even realizing it. There are moments when I don't even notice that I'm having a bad day until you come along and make me forget about it for a while. I hope I can continue giving you the same happiness that you bring into my life. And I hope we never get tired of making each other smile, even over the smallest and funniest things."],
+
+    ["Getting to Know You",
+    "Every little detail I learn about you gives me another reason to appreciate who you are. The more I get to know you, the more I realize how thoughtful and intelligent you are. I admire how deeply you think about things and how you see the world from different perspectives. There's always something new I discover about you, and honestly, I never get tired of learning more about the person you are. I love hearing your opinions, listening to your stories, and understanding the reasons behind the way you think. It makes me realize that there's so much more to you than what I initially noticed. I want to keep discovering the little things that make you happy, the things that worry you, and the dreams you want to achieve. I don't want to know just your favorite things; I want to understand the person behind them, too."],
+
+    ["The Little Things",
+    "Sometimes, it's not the grand gestures that make me happy; it's the little things you do. I treasure your words, your stories, your habits, and even the random things you share with me. I also love how you teach me things I didn't know before and introduce me to different perspectives. Even through the smallest conversations, I learn something from you. I appreciate the way you share parts of your everyday life with me because it makes me feel included in your world. I love knowing about the little things that happen during your day, even when they might seem unimportant. These are the moments that make me feel closer to you despite the distance between us. You may not notice it, but I remember a lot of the little things you tell me. They become part of the memories I enjoy looking back on."],
+
+    ["Our First Laughs",
+    "I will never forget how I could talk about the most random things, especially my never-ending conversations about pooping, even though I know you're not particularly fond of that topic. Haha! I guess that's just one of the funny little things about us. What I love most is that I'm fond of every topic we get to talk about, whether serious, random, silly, or completely ridiculous. I enjoy how we can switch from meaningful conversations to the most unserious topics in just a few seconds. Sometimes, it's not even the topic that makes me happy but the fact that I'm sharing that moment with you. I hope we never become too busy to laugh about silly things together. I want us to have more inside jokes that only we understand. Someday, I hope we can sit beside each other and laugh about all these funny conversations we've had from a distance."],
+
+    ["When I Started Missing You",
+    "I remember the first time I heard your voice during our call. I honestly didn't want that call to end because hearing you made me feel so calm and happy. Your voice has this way of making everything feel a little lighter, especially when I'm having a long day. I remember wanting to keep talking because I wasn't ready for that moment to be over. It's funny how hearing someone's voice can make you miss them even more after the call ends. I wish I could be beside you instead of just hearing you through a phone. I want to experience the feeling of talking to you while looking into your eyes, laughing together, and enjoying each other's company. Distance makes me appreciate the simple things even more, like sitting next to you, holding your hand, and spending an ordinary day together. Until that day comes, I'll treasure every call and every minute I get to hear your voice."],
+
+    ["My Favorite Good Morning",
+    "One of my favorite parts of the day is waking up and seeing a message from you. There were times when I would wake up earlier just because I was excited to see if you had sent me something. Even a simple good morning from you could make my day feel so much better. You probably don't realize how much happiness a small message can bring me, but it really does. Sometimes, just knowing that you thought of me is already enough to make me smile. I love starting my day with a little reminder that you're there, even if we're miles apart. I hope you never feel that your messages are ordinary because they mean more to me than you might think. I also hope that whenever you wake up, you feel loved, appreciated, and remembered. And someday, I hope I won't have to settle for reading your good morning messages because I'll finally get to say them while you're right beside me."],
+
+    ["A Day I Felt Lucky",
+    "There was a time when I didn't always feel excited about waking up or even going to sleep because I was putting so much pressure on myself to focus on my studies and reach my goals. Sometimes, life felt like a never-ending list of responsibilities, and I would become too caught up in thinking about everything I needed to accomplish. But having you in my life gave me another reason to smile and look forward to my days. You became someone I could talk to when I wanted to share something, whether it was a good experience or just a random thought. I realized that life isn't only about responsibilities, deadlines, and achievements. There are also people and moments worth appreciating along the way. I feel lucky not because everything is perfect, but because I have someone with whom I can share my thoughts, happiness, and little moments. I'm grateful that I get to learn, grow, and experience life with you. You remind me that even during busy days, there's always room for something beautiful."],
+
+    ["Our Little Adventures",
+    "I look forward to all the places we have yet to visit and all the memories we have yet to create. I hope that someday we get to travel to the places we've always talked about, explore new surroundings, try different things, and take lots of pictures together. I imagine us walking around unfamiliar places, deciding where to eat, getting lost sometimes, and laughing about the little inconveniences along the way. I don't think every adventure needs to be expensive or perfectly planned. Even a simple walk, a random food trip, or spending an afternoon together would be special to me. I want to experience those little adventures that we will eventually look back on and smile about. I want to collect memories with you, not just pictures on a phone. For now, we can dream about them, but someday, I hope we get to turn those dreams into real experiences. I can't wait for the day when we can finally say, 'Remember when we talked about going here? We're finally here!'" ],
+
+    ["When We Miss Each Other",
+    "I know there will be days when the distance feels a little harder than usual. There will be moments when all I want is to be beside you, give you a hug, or simply spend time with you without worrying about the miles between us. Sometimes, I wish I could magically appear beside you whenever you need someone to hold your hand or listen to your stories. I know messages and calls cannot replace being physically together, but I hope they remind you that you are never forgotten. Even when we're far apart, you're still someone I think about, care for, and cheer on. I want to know how your day went, what made you smile, and whether something is bothering you. I hope we continue making time for each other despite our different routines. And whenever you miss me, remember that somewhere out here, there's someone wishing he could be right beside you, too."],
+
+    ["Choosing Understanding",
+    "I know that we won't always see things the same way, and there may be moments when we misunderstand each other. But I believe that loving someone also means being willing to listen, understand, and learn from one another. I don't want us to focus on always being right; I want us to focus on understanding each other better. We both have different experiences, emotions, and ways of expressing ourselves, and I want us to respect those differences. I hope we can always communicate honestly instead of letting small problems become bigger than they should be. When one of us is having a difficult day, I want us to offer patience instead of judgment. I don't expect us to be perfect because we're both human and still learning. What matters to me is that we continue choosing patience, honesty, and communication, even during difficult moments. I want us to feel safe enough to be ourselves around each other."],
+
+    ["Your Beautiful Heart",
+    "There's so much about you that I admire, and it's not just about the things you say or do. I admire your strength, your kindness, your thoughtful mind, and even the little things that make you who you are. I know you have your own struggles and moments when things aren't easy, but I hope you never forget how special you are. I wish you could sometimes see yourself through my eyes so you could understand how much there is to appreciate about you. You don't have to be perfect to be appreciated, and you don't have to pretend to be strong all the time. It's okay to have moments when you're tired, emotional, or unsure of yourself. I want you to know that you deserve care and understanding on those days, too. I love that you're simply yourself, and I hope you never feel the need to change who you are just to be worthy of someone's love."],
+
+    ["A Reminder to Rest",
+    "My love, I hope you never feel like you have to accomplish everything in one day. I know you have responsibilities, dreams, and things you want to achieve, but please don't forget to take care of yourself along the way. It's okay to pause, rest, and breathe when everything feels overwhelming. You deserve peaceful days, enough sleep, and moments when you don't have to worry about anything. Please don't be too hard on yourself whenever things don't go according to plan. Not every day has to be productive, and not every mistake means you're falling behind. Sometimes, taking a break is also part of moving forward. I hope you give yourself the same patience and kindness that you give to other people. I may not always be physically there to remind you, but please remember that your well-being matters to me. Take care of yourself, okay? I want you to be happy and healthy while chasing all the beautiful things you dream about."],
+
+    ["My Favorite Person",
+    "Out of all the people I could have met, I'm grateful that life somehow led me to you. You're not just someone I talk to every day; you're someone whose presence has become a meaningful part of my life. I love sharing random stories with you, hearing about your day, and discovering new things about you. Even when we don't have anything important to talk about, I still enjoy having you around. I don't think you need to do something extraordinary just to make me happy because sometimes your simple presence is already enough. You're someone I can be silly with, someone I can share my thoughts with, and someone I want to create more memories with. I don't know how many times I'll say this, but I'm really happy that I got to know you and have you as my person. Among all the people in this world, I'm glad I get to spend my time getting to know you."],
+
+    ["The Things I Admire",
+    "I admire so many things about you. I admire your courage, your intelligence, your dreams, and the way you continue moving forward even when things become difficult. I admire how you have your own thoughts, opinions, and ways of seeing the world. I love that there's always something meaningful I can learn from you, even during our most casual conversations. I hope you never underestimate yourself or the things you're capable of achieving. I know there will be days when you question your abilities or feel like you're not doing enough, but I hope you remember how much potential you have. You don't need to compare your progress with anyone else's because your journey is your own. Even the smallest steps you take deserve recognition. I'll always be happy to see you succeed, and I hope I get to witness many of your dreams becoming reality."],
+
+    ["A Promise of Effort",
+    "I can't promise that every day will be perfect or that we'll never experience difficult moments. But I can promise that I want to keep learning how to love you better. I want to show you through my actions that you matter to me, not just through sweet words. I'll do my best to communicate, listen, understand, and make time for us. I want to remember the little things that make you happy and be more aware of the things that might hurt you. I know love isn't always about grand gestures or romantic messages. Sometimes, it's about being consistent, keeping your word, and making an effort even on ordinary days. I want to grow with you instead of expecting everything to be perfect from the beginning. I hope we continue choosing each other, not just when everything is easy but also when life gets complicated. Most importantly, I want you to feel that my love is something you can see and experience, not just something you hear."],
+
+    ["More Memories Ahead",
+    "When I think about us, I realize that there are still so many firsts waiting for us. More first trips, first dates, first adventures, new experiences, and countless little moments that we haven't experienced yet. I get excited just thinking about everything we could do together someday. I want to know what it feels like to celebrate special occasions beside you, share meals together, and spend an entire day doing absolutely nothing but enjoying each other's company. I want more pictures, more funny stories, more calls, and more memories that we'll talk about years from now. I know we cannot predict everything that will happen, but I hope we always make room for new experiences. There will be so many things we haven't tried and places we haven't discovered yet. I hope we continue making memories, enjoying the little things, and giving ourselves more reasons to smile. Our story still has so many beautiful pages waiting to be written."],
+
+    ["A Love That Learns",
+    "I want our love to be something that continues growing as we get to know each other more. I want us to learn from our mistakes, understand each other's differences, and become better people along the way. I don't expect us to know everything about love right away because we're both still learning. There will be things we'll discover about each other that we didn't know before, and I hope we always remain curious and willing to understand. I want us to celebrate each other's strengths while being patient with each other's weaknesses. I want us to have honest conversations, even when some topics are difficult to discuss. I believe that a healthy relationship is not about never having problems but about learning how to face them together. What matters to me is that we continue building something based on trust, respect, honesty, patience, and genuine care for one another. I want our love to become stronger through the things we learn together."],
+
+    ["My Wish for You",
+    "As you celebrate another year of your life, I wish you nothing but beautiful things. May this new chapter bring you peace, good health, happiness, and opportunities that bring you closer to your dreams. I hope life becomes a little kinder to you, that your worries become lighter, and that you find more reasons to smile. I hope you meet people who appreciate your kindness and situations that remind you how capable you are. May you have the courage to try new things and the strength to overcome whatever challenges come your way. I also hope you find time to enjoy life instead of constantly worrying about what comes next. You deserve to celebrate your little victories just as much as your big achievements. Most of all, I hope you never lose the beautiful person you are. You deserve all the good things life has to offer, my love."],
+
+    ["Your Dreams Matter",
+    "I hope you never give up on the dreams you carry in your heart. I know you have your own goals, plans, and things you want to accomplish, and I want you to know that they matter. I want to see you become the person you've always imagined yourself becoming. Don't be afraid to take your time or make mistakes along the way. You don't have to figure everything out immediately, and you don't have to have everything planned perfectly. There will be days when progress feels slow, but that doesn't mean you're not moving forward. I hope you always find the motivation to keep going, even when things become challenging. I'll be happy to see you grow, celebrate your achievements, and remind you how far you've come whenever you forget. I want to be someone who supports your dreams rather than makes you feel like you have to give them up. Your happiness and success will always be worth celebrating."],
+
+    ["Thank You for Staying",
+    "Thank you for giving me your time, for listening to my random stories, for sharing your thoughts, and for allowing me to become part of your life. Thank you for every conversation, every laugh, every call, and every little moment we've shared. Thank you for being patient with me, especially when I say the most random things or when I don't always know how to express myself. I may not always find the perfect words to explain how much I appreciate you, but I hope my actions make you feel valued. I appreciate the effort you give, even in the smallest ways. I know we both have our own responsibilities and busy days, so I never want to take the time we share for granted. You have become a beautiful part of my everyday life, and I'm thankful for that. Thank you for being someone I can make memories with and someone I get to know a little more every day."],
+
+    ["One More Chapter",
+    "As we turn another page in our story, I want you to know that I'm looking forward to everything that still awaits us. We've already created memories worth keeping, but I know there are still so many more waiting for us. There will be new experiences, lessons, laughter, and maybe even a few challenges along the way. I hope we continue discovering new things about each other, trying things we've never done before, and finding happiness in ordinary moments. I want us to look back someday and realize how far we've come since those first conversations. I hope we can laugh about our old jokes, remember our first calls, and appreciate all the little things that brought us closer. I don't know exactly what every chapter of our story will look like, but I know there are many moments I would love to experience with you. This isn't the end of our story; it's simply another chapter, and I'm excited to see where it takes us."],
+
+    ["Your 24th Birthday",
+    "Happy 24th birthday, my love! ♡ Today is all about celebrating you and the beautiful person you've become. I hope this new chapter of your life brings you endless happiness, peaceful days, good health, exciting opportunities, and success in everything you work hard for. Never stop believing in yourself, chasing your dreams, and becoming the person you want to be. I hope you experience more beautiful places, discover new things, meet wonderful people, and create memories that will stay with you forever. I wish I could be right beside you to celebrate this special day, give you the biggest hug, hold your hand, and remind you how much you mean to me. I want you to enjoy every moment of today because you deserve to feel special and appreciated. Thank you for being part of my story. Thank you for all the laughs, conversations, lessons, and memories that made my days brighter. I'm so grateful that I met you, and I hope we get to celebrate many more birthdays together. No matter how much time passes, I hope you always remember how special you are to me. Here's to another year of your life, more dreams to achieve, more adventures to experience, and more beautiful memories for us to create. I love you so much, my love. Happy 24th birthday! ♡"]
+
+];
+
+const giftMessages = [
+  ["🎀","A little sweetness","A reminder that you deserve soft days, thoughtful surprises, and all the little things that make you smile."],
+  ["🍓","Sweet treats for you","If I could, I would bring you your favorite treats and stay beside you while we enjoy them together."],
+  ["🧸","A teddy bear hug","Whenever you need a hug, imagine this little bear holding you close. You are loved, always."],
+  ["💐","Flowers from me","A bouquet of white lilies, pink carnations, roses, and baby's breath — chosen with you in my heart."],
+  ["💝","My biggest surprise","My greatest gift is not something wrapped in a box. It is the love, time, patience, and memories I hope we continue building together."]
+];
+
+function openEnvelope(){
+  const envelope=document.getElementById('envelope');
+  envelope.classList.add('open');
+  setTimeout(()=>{
+    document.getElementById('envelopeOverlay').classList.add('hidden');
+    createConfetti();
+  },650);
+}
+
+document.getElementById('envelope').addEventListener('click',openEnvelope);
+
+document.getElementById('envelope').addEventListener('keydown',e=>{
+  if(e.key==='Enter'||e.key===' '){
+    e.preventDefault();
+    openEnvelope();
+  }
+});
+
+/* MOBILE NAVIGATION */
+const menuBtn=document.getElementById('menuBtn');
+
+menuBtn.addEventListener('click',()=>{
+  const links=document.getElementById('navLinks');
+  const active=links.classList.toggle('active');
+  menuBtn.setAttribute('aria-expanded',String(active));
+});
+
+document.querySelectorAll('.nav-links a').forEach(link=>
+  link.addEventListener('click',()=>{
+    document.getElementById('navLinks').classList.remove('active');
+    menuBtn.setAttribute('aria-expanded','false');
+  })
+);
+
+/* SCROLL ANIMATIONS */
+if('IntersectionObserver' in window){
+  const observer=new IntersectionObserver(entries=>
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    }),{threshold:.12}
+  );
+
+  document.querySelectorAll('.reveal,.section-heading').forEach(el=>
+    observer.observe(el)
+  );
+}else{
+  document.querySelectorAll('.reveal,.section-heading').forEach(el=>
+    el.classList.add('visible')
+  );
+}
+
+/* FALLING FLOWER PETALS */
+function createPetal(){
+  const petal=document.createElement('div');
+  petal.className='petal';
+
+  const choices=['🌸','🌷','💗','🌺','♡'];
+
+  petal.textContent=choices[Math.floor(Math.random()*choices.length)];
+  petal.style.left=Math.random()*100+'vw';
+  petal.style.fontSize=(12+Math.random()*14)+'px';
+  petal.style.animationDuration=(7+Math.random()*7)+'s';
+
+  document.body.appendChild(petal);
+
+  setTimeout(()=>petal.remove(),15000);
+}
+
+setInterval(createPetal,1800);
+
+/* CONFETTI EFFECT */
+function createConfetti(){
+  const pieces=['💗','🌸','✨','♡','🌷'];
+
+  for(let i=0;i<32;i++){
+    const bit=document.createElement('div');
+    bit.className='confetti';
+
+    bit.textContent=pieces[Math.floor(Math.random()*pieces.length)];
+    bit.style.left=Math.random()*100+'vw';
+    bit.style.top='-30px';
+    bit.style.fontSize=(14+Math.random()*18)+'px';
+    bit.style.animationDelay=Math.random()+'s';
+
+    document.body.appendChild(bit);
+
+    setTimeout(()=>bit.remove(),5000);
+  }
+}
+
+/* PHOTO GALLERY AND LIGHTBOX */
+function attachImageLightbox(img){
+  img.addEventListener('click',()=>openLightbox(img.src));
+}
+
+document.querySelectorAll('#galleryGrid img').forEach(attachImageLightbox);
+
+/* UPLOAD YOUR OWN PHOTOS */
+document.getElementById('photoUpload').addEventListener('change',e=>{
+  [...e.target.files].forEach(file=>{
+    if(!file.type.startsWith('image/'))return;
+
+    const url=URL.createObjectURL(file);
+    const card=document.createElement('div');
+
+    card.className='polaroid';
+    card.style.setProperty(
+      '--rotation',
+      (Math.random()*5-2.5)+'deg'
+    );
+
+    const img=document.createElement('img');
+    img.src=url;
+    img.alt='Our uploaded memory';
+    img.loading='lazy';
+
+    attachImageLightbox(img);
+
+    const caption=document.createElement('p');
+    caption.textContent='my favorite person ♡';
+
+    card.append(img,caption);
+
+    document.getElementById('galleryGrid').appendChild(card);
+  });
+
+  e.target.value='';
+});
+
+/* OPEN FULL-SIZE PHOTO */
+function openLightbox(src){
+  document.getElementById('lightboxImage').src=src;
+  document.getElementById('lightbox').classList.add('show');
+}
+
+/* CLOSE PHOTO */
+function closeLightbox(event){
+  if(event && event.target.id==='lightboxImage')return;
+
+  document.getElementById('lightbox').classList.remove('show');
+}
+
+/* CLOSE MODALS USING ESCAPE */
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    closeLightbox();
+    closeLetter();
+  }
+});
+
+/* CREATE THE 24 CLICKABLE LETTERS */
+const lettersGrid=document.getElementById('lettersGrid');
+
+letters.forEach((letter,index)=>{
+  const button=document.createElement('button');
+
+  button.className='letter-box';
+
+  button.innerHTML=`
+    <span class="number">Letter ${String(index+1).padStart(2,'0')}</span>
+    <span class="tiny-heart">♡</span>
+    <strong></strong>
+    <small>tap to open</small>
+  `;
+
+  button.querySelector('strong').textContent=letter[0];
+
+  button.addEventListener('click',()=>openLetter(index));
+
+  lettersGrid.appendChild(button);
+});
+
+/* OPEN A LETTER */
+function openLetter(index){
+  const letter=letters[index];
+
+  document.getElementById('letterNumber').textContent=
+    `A LITTLE PIECE OF MY HEART · ${index+1} OF 24`;
+
+  document.getElementById('letterTitle').textContent=letter[0];
+
+  document.getElementById('letterContent').textContent=letter[1];
+
+  document.getElementById('letterModal').classList.add('show');
+}
+
+/* CLOSE A LETTER */
+function closeLetter(){
+  document.getElementById('letterModal').classList.remove('show');
+}
+
+document.getElementById('letterModal').addEventListener('click',e=>{
+  if(e.target.id==='letterModal')closeLetter();
+});
+
+/* FIVE INTERACTIVE GIFTS */
+function revealGift(index){
+  const gift=giftMessages[index];
+
+  document.getElementById('surpriseEmoji').textContent=gift[0];
+  document.getElementById('surpriseTitle').textContent=gift[1];
+  document.getElementById('surpriseText').textContent=gift[2];
+
+  document.getElementById('giftSurprise').classList.add('show');
+
+  createConfetti();
+
+  document.getElementById('giftSurprise').scrollIntoView({
+    behavior:'smooth',
+    block:'center'
+  });
+}
+
+/* CLOSE GIFT SURPRISE */
+function closeSurprise(){
+  document.getElementById('giftSurprise').classList.remove('show');
+}
+
+/* YOUTUBE MUSIC PLAYER */
+function loadYoutube(){
+  const input=document.getElementById('youtubeLink').value.trim();
+  const container=document.getElementById('youtubeContainer');
+
+  let videoId='';
+
+  try{
+    const url=new URL(input);
+
+    if(url.hostname==='youtu.be'||url.hostname.endsWith('.youtu.be')){
+      videoId=url.pathname.slice(1).split('/')[0];
+    }
+    else if(url.hostname.includes('youtube.com')){
+      if(url.pathname==='/watch'){
+        videoId=url.searchParams.get('v')||'';
+      }
+      else if(url.pathname.startsWith('/embed/')){
+        videoId=url.pathname.split('/')[2]||'';
+      }
+      else if(url.pathname.startsWith('/shorts/')){
+        videoId=url.pathname.split('/')[2]||'';
+      }
+    }
+  }catch(error){
+    videoId='';
+  }
+
+  if(!/^[a-zA-Z0-9_-]{11}$/.test(videoId)){
+    container.textContent='Please paste a valid YouTube video link. ♡';
+    return;
+  }
+
+  const iframe=document.createElement('iframe');
+
+  iframe.src='https://www.youtube-nocookie.com/embed/'+videoId;
+  iframe.title='Our birthday song';
+
+  iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+
+  iframe.allowFullscreen=true;
+
+  container.replaceChildren(iframe);
+}
+</script>
+</body>
+</html>
